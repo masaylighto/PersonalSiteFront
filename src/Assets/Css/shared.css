@@ -1,0 +1,38 @@
+@font-face 
+{
+    font-family: simsun;
+    src: url("../fonts/Simsun.ttf");
+}
+*{
+    font-family: simsun;
+}
+.bg-gradiant-blue{
+    background:linear-gradient(102deg,#ffffffc5 30%,  #ffffff36  52%)
+}
+.h-50vmin{
+    height: 50vmin;
+}
+.h-60vmin{
+    height: 60vmin;
+}
+.h-70vmin{
+    height: 70vmin;
+}
+.h-80vmin{
+    height: 80vmin;
+}
+.h-85vmin{
+    height: 85vmin;
+}
+.h-90vmin{
+    height: 90vmin;
+}
+.h-95vmin{
+    height: 90vmin;
+}
+.h-100vmin{
+    height: 100vmin;
+}
+.bg-main-graidant{
+    background:linear-gradient(326deg,#ffffff00 6%, #ffffff12 4%, #ffffff00   23%),linear-gradient(321deg,#ffffff00 11%, #ffffff12 -1%, #ffffff00   25%),linear-gradient(295deg,#ffffff00 4%, #ffffff12 13.4%, #ffffff00   8%),linear-gradient(292deg,#ffffff00 18%, #ffffff12 21.4%, #ffffff00   9%),linear-gradient(169deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(286deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(275deg,#ffffff00 22%, #ffffff12 32.4%, #ffffff00   24%),linear-gradient(270deg,#95B2FF 31%, white, transparent  35%)
+}
