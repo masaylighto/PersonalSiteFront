@@ -12,7 +12,7 @@ class Cnav extends React.Component{
     return     [
             {
                 "Name":"Home",
-                "Url":"/Home"
+                "Url":"/"
             },
             {
                 "Name":"Skills",

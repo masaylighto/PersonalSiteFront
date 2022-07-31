@@ -11,9 +11,15 @@ function col(props){
             {props.children}
     </div>)
 }
+function grid(props){
+    return (<div className={'grid ' +props.className}>
+            {props.children}
+    </div>)
+}
 const containers={
     row:row,
-    col:col
+    col:col,
+    grid:grid
 
 }
 

@@ -47,36 +47,44 @@ class Chome extends React.Component{
             </p>
         )
     }
+    startSide(){
+
+        return (
+            <div className='w-3/5'>
+                <containers.row className='mx-auto gap-3 w-4/6'>
+                    <containers.col  className={"  justify-between py-1"}>
+                       {this.contactUs()}
+                    </containers.col>
+                    {this.aboutUs()}
+                </containers.row>
+            </div>
+        )
+    }
+    endSide(){
+        return (       
+        <containers.row className='w-2/5 flex justify-start gap-2  items-center h-4/5'>
+            <div className={" w-3/6 bg-gradiant-blue rounded-full p-6 h-3/5"}>
+                <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
+                <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
+                </div>
+            </div>
+            <containers.col className={"text-white justify-between mb-5 h-2/5"}>
+                <p className='-ml-8 hover:-translate-y-1'>Devops Engineer</p>
+                <p className='-ml-3 hover:-translate-y-1 hover:translate-x-1'>Software Developer</p>
+                <p className='-ml-2 hover:translate-x-1'>Free Software Activist</p>                        
+                <p className='-ml-3 hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
+                <p className='-ml-5 hover:translate-y-1 '>Data Scientist</p>
+            </containers.col>
+        </containers.row>
+        )
+    }
     render(){
 
         return <containers.col className={"h-100vmin bg-main-graidant"}>
             <Cnav></Cnav>
             <containers.row className={"w-full justify-evenly h-95vmin items-center"}>
-            <div className='w-3/5'>
-                <containers.row className='mx-auto gap-3 w-4/6'>
-                <containers.col  className={"  justify-between py-1"}>
-                       {this.contactUs()}
-                    </containers.col>
-                  {this.aboutUs()}
-          
-                </containers.row>
-                </div>
-                <containers.row className='w-2/5 flex justify-start gap-2  items-center h-4/5'>
-                   
-                    <div className={" w-3/6 bg-gradiant-blue rounded-full p-6 h-3/5"}>
-                        <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
-                            <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
-                        </div>
-                    </div>
-                    <containers.col className={"text-white justify-between mb-5 h-2/5"}>
-                        <p className='-ml-8 hover:-translate-y-1'>Devops Engineer</p>
-                        <p className='-ml-3 hover:-translate-y-1 hover:translate-x-1'>Software Developer</p>
-                        <p className='-ml-2 hover:translate-x-1'>Free Software Activist</p>                        
-                        <p className='-ml-3 hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
-                        <p className='-ml-5 hover:translate-y-1 '>Data Scientist</p>
-                    </containers.col>
-                </containers.row>
-             
+                {this.startSide()}
+                {this.endSide()}
             </containers.row>
         </containers.col>
     }
