@@ -6,7 +6,7 @@ class Cnav extends React.Component{
 
     btn(name,link,key){
 
-        return <buttons.link key={key} name={name} jumpTo={link} className={"px-4 h-10 "}/>
+        return <buttons.link key={key} name={name} jumpTo={link} className={"px-4 h-10  hover:border-t-2 border-t-blue-300"}/>
     }
     pageBtns(){
     return     [
@@ -33,9 +33,8 @@ class Cnav extends React.Component{
     }
     startSide(){
         return(
-            <containers.row  className={"justify-center items-center px-3 gap-2"}>
-               
-                <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >Ali  <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7  bg-no-repeat bg-contain"}/> Miracle</p>
+            <containers.row  className={"justify-center items-center px-3 gap-2"}>               
+                <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >Ali  <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7 hover:scale-110  bg-no-repeat bg-contain"}/> Miracle</p>
             </containers.row >
         )
     }
