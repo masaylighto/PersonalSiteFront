@@ -34,12 +34,13 @@ class Chome extends React.Component{
         return (
 
             <p className={"w-full border-l pl-1 border-black"}>
-            I am <span style={{color:"#95B2FF"}} className=' w-fit'>Ali Abdul Ghani</span>
+             I am <span style={{color:"#628cfb"}} className=' w-fit'>Ali Abdul Ghani</span>
             <br/>
-             based in Baghdad. People call me ‘Ali Miracle’ <br/> and I am known by this name on the internet.
-            This name came to me when I was a Solaris user. I like to tell jokes, I like it when people laugh until they can’t breathe, it makes me happy
-            My Education Bachelor of English Literature 2015 I was not allowed to get a degree in Computer Science in Iraq. The law here does not allow blind
-            people to obtain a degree in Computer Science or any scientific stream such as Mathematics or Physics.
+             I'm from Baghdad. I go by the name  <span style={{color:"#628cfb"}} className=' w-fit'>"Ali Miracle"</span>, am known by this name on the internet, and have been referred to by this name ever since I was a Solaris user.   
+             <br/> 
+             I like to tell jokes, I like it when people laugh until they can't breathe, it makes me happy.
+            <br/> 
+             My education is bachelor of English literature , As the laws in Iraq does not permit blind people from obtaining degrees in computer science or any other scientific field, such as mathematics or physics.
             </p>
         )
     }
@@ -60,15 +61,15 @@ class Chome extends React.Component{
                 <containers.row className='w-2/5 flex justify-start gap-2  items-center h-4/5'>
                    
                     <div className={" w-3/6 bg-gradiant-blue rounded-full p-6 h-3/5"}>
-                        <div className={"  bg-white rounded-full p-3  w-full h-full"}>
+                        <div style={{background:"#ffffff96"}} className={"  rounded-full p-3  w-full h-full"}>
                             <img src={require("../Assets/icons/freedo.png")} className={"bg-contain    w-full h-full "} ></img>
                         </div>
                     </div>
                     <containers.col className={"text-white justify-between mb-5 h-2/5"}>
-                        <p className='-ml-6'>Devops Engineer</p>
-                        <p className='-ml-1'>Software Developer</p>
-                        <p>Free Software Activist</p>                        
-                        <p className='-ml-1'>System Adminstrator</p>
+                        <p className='-ml-8'>Devops Engineer</p>
+                        <p className='-ml-3'>Software Developer</p>
+                        <p className='-ml-2'>Free Software Activist</p>                        
+                        <p className='-ml-3'>System Adminstrator</p>
                         <p className='-ml-5'>Data Scientist</p>
                     </containers.col>
                 </containers.row>

@@ -35,7 +35,7 @@ class Cnav extends React.Component{
         return(
             <containers.row  className={"justify-center items-center px-3 gap-2"}>
                
-                <p style={{color:"#95B2FF"}} className={"flex gap-2 items-end"} >Ali  <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7  bg-no-repeat bg-contain"}/> Miracle</p>
+                <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >Ali  <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7  bg-no-repeat bg-contain"}/> Miracle</p>
             </containers.row >
         )
     }
@@ -47,7 +47,7 @@ class Cnav extends React.Component{
     render(){
 
         return (<containers.row  className={"w-full  "}>   
-                   {this.startSide()}
+                  {this.startSide()}
                   {this.endSide()}  
                  
                       
