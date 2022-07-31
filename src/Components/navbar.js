@@ -6,7 +6,7 @@ class Cnav extends React.Component{
 
     btn(name,link,key){
 
-        return <buttons.link key={key} name={name} jumpTo={link} className={"px-4 h-10  hover:border-t-2 border-t-blue-300"}/>
+        return <buttons.link title={"navbar btn"} key={key} name={name} jumpTo={link} className={"px-4 h-10  hover:border-t-2 border-t-blue-300"}/>
     }
     pageBtns(){
     return     [

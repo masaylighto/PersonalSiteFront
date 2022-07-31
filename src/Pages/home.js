@@ -26,7 +26,7 @@ class Chome extends React.Component{
             },
 
         ].map((item,index)=>{
-            return <buttons.contact  className={"hover:-translate-x-2"} key={index} link={item.link} img={item.img}/>
+            return <buttons.contact tabIndex={index+16} title={item.link}  className={"hover:-translate-x-2"} key={index} link={item.link} img={item.img}/>
 
         })
     }
@@ -34,16 +34,16 @@ class Chome extends React.Component{
         return (
 
             <p className={"w-full border-l pl-1 border-black"}>
-            <div className='hover:translate-x-1'> I am <span style={{color:"#628cfb"}} className=' w-fit'>Ali Abdul Ghani</span></div>        
-            <div className='hover:translate-x-1'> I'm from Baghdad. I go by the name  <span style={{color:"#628cfb"}} className=' w-fit'>"Ali Miracle"</span>,</div>
-            <div className='hover:translate-x-1'> am known by this name on the internet, and have been  </div>
-            <div className='hover:translate-x-1'> referred to by this name ever since I was a Solaris user. </div>     
-            <div className='hover:translate-x-1'> I like to tell jokes, I like it when people laugh until</div>
-            <div className='hover:translate-x-1'> they can't breathe, it makes me happy.</div>
-            <div className='hover:translate-x-1'> My education is bachelor of English literature ,</div>
-            <div className='hover:translate-x-1'> As the laws in Iraq does not permit blind people</div> 
-            <div className='hover:translate-x-1'> from obtaining degrees in computer science or any other </div>
-            <div className='hover:translate-x-1'> scientific field, such as mathematics or physics.</div>
+            <div tabIndex={1}  className='hover:translate-x-1'> I am <span style={{color:"#628cfb"}} className=' w-fit'>Ali Abdul Ghani</span></div>        
+            <div tabIndex={2} className='hover:translate-x-1'> I'm from Baghdad. I go by the name  <span style={{color:"#628cfb"}} className=' w-fit'>"Ali Miracle"</span>,</div>
+            <div tabIndex={3} className='hover:translate-x-1'> am known by this name on the internet, and have been  </div>
+            <div tabIndex={4} className='hover:translate-x-1'> referred to by this name ever since I was a Solaris user. </div>     
+            <div tabIndex={5} className='hover:translate-x-1'> I like to tell jokes, I like it when people laugh until</div>
+            <div tabIndex={6} className='hover:translate-x-1'> they can't breathe, it makes me happy.</div>
+            <div tabIndex={7} className='hover:translate-x-1'> My education is bachelor of English literature ,</div>
+            <div tabIndex={8} className='hover:translate-x-1'> As the laws in Iraq does not permit blind people</div> 
+            <div tabIndex={9} className='hover:translate-x-1'> from obtaining degrees in computer science or any other </div>
+            <div tabIndex={10} className='hover:translate-x-1'> scientific field, such as mathematics or physics.</div>
             </p>
         )
     }
@@ -69,11 +69,11 @@ class Chome extends React.Component{
                 </div>
             </div>
             <containers.col className={"text-white justify-between mb-5 h-2/5"}>
-                <p className='-ml-8 hover:-translate-y-1'>Devops Engineer</p>
-                <p className='-ml-3 hover:-translate-y-1 hover:translate-x-1'>Software Developer</p>
-                <p className='-ml-2 hover:translate-x-1'>Free Software Activist</p>                        
-                <p className='-ml-3 hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
-                <p className='-ml-5 hover:translate-y-1 '>Data Scientist</p>
+                <p tabIndex={11} className='-ml-8 hover:-translate-y-1'>Devops Engineer</p>
+                <p tabIndex={12} className='-ml-3 hover:-translate-y-1 hover:translate-x-1'>Software Developer</p>
+                <p tabIndex={13} className='-ml-2 hover:translate-x-1'>Free Software Activist</p>                        
+                <p tabIndex={14} className='-ml-3 hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
+                <p tabIndex={15} className='-ml-5 hover:translate-y-1 '>Data Scientist</p>
             </containers.col>
         </containers.row>
         )
