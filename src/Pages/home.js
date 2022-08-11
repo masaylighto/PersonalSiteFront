@@ -62,27 +62,27 @@ class Chome extends React.Component{
     }
     endSide(){
         return (       
-        <containers.row className='w-2/5 flex justify-start gap-2  items-center h-4/5'>
-            <div className={" w-3/6 bg-gradiant-blue rounded-full p-6 h-3/5"}>
+        <containers.row className='w-2/5 flex justify-start gap-2  items-center h-full'>
+            <div className={" w-3/6 bg-gradiant-blue rounded-full p-6 h-3/6"}>
                 <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
                 <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
                 </div>
             </div>
-            <containers.col className={"text-white justify-between mb-5 h-2/5"}>
-                <p tabIndex={11} className='-ml-8 hover:-translate-y-1'>Devops Engineer</p>
+            <containers.col className={"text-white justify-between mb-5 h-2/6"}>
+                <p tabIndex={11} className='-ml-9 hover:-translate-y-1'>Devops Engineer</p>
                 <p tabIndex={12} className='-ml-3 hover:-translate-y-1 hover:translate-x-1'>Software Developer</p>
                 <p tabIndex={13} className='-ml-2 hover:translate-x-1'>Free Software Activist</p>                        
                 <p tabIndex={14} className='-ml-3 hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
-                <p tabIndex={15} className='-ml-5 hover:translate-y-1 '>Data Scientist</p>
+                <p tabIndex={15} className='-ml-6 hover:translate-y-1 '>Data Scientist</p>
             </containers.col>
         </containers.row>
         )
     }
     render(){
 
-        return <containers.col className={"h-100vmin bg-main-graidant"}>
+        return <containers.col className={"h-full bg-main-graidant"}>
             <Cnav></Cnav>
-            <containers.row className={"w-full justify-evenly h-95vmin items-center"}>
+            <containers.row className={"w-full justify-evenly h-95 items-center"}>
                 {this.startSide()}
                 {this.endSide()}
             </containers.row>

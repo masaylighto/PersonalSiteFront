@@ -9,30 +9,69 @@
 .bg-gradiant-blue{
     background:linear-gradient(102deg,#ffffffc5 30%,  #ffffff36  52%)
 }
-.h-50vmin{
-    height: 50vmin;
+.h-50{
+    height: 50%;
 }
-.h-60vmin{
-    height: 60vmin;
+.h-60{
+    height: 60%;
 }
-.h-70vmin{
-    height: 70vmin;
+.h-70{
+    height: 70%;
 }
-.h-80vmin{
-    height: 80vmin;
+.h-80{
+    height: 80%;
 }
-.h-85vmin{
-    height: 85vmin;
+.h-85{
+    height: 85%;
 }
-.h-90vmin{
-    height: 90vmin;
+.h-90{
+    height: 90%;
 }
-.h-95vmin{
-    height: 90vmin;
+.h-95{
+    height: 90%;
 }
-.h-100vmin{
-    height: 100vmin;
+.h-100{
+    height: 100%;
 }
 .bg-main-graidant{
     background:linear-gradient(326deg,#ffffff00 6%, #ffffff12 4%, #ffffff00   23%),linear-gradient(321deg,#ffffff00 11%, #ffffff12 -1%, #ffffff00   25%),linear-gradient(295deg,#ffffff00 4%, #ffffff12 13.4%, #ffffff00   8%),linear-gradient(292deg,#ffffff00 18%, #ffffff12 21.4%, #ffffff00   9%),linear-gradient(169deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(286deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(275deg,#ffffff00 22%, #ffffff12 32.4%, #ffffff00   24%),linear-gradient(270deg,#95B2FF 31%, white, transparent  35%)
 }
+.ring-blue{
+    background: linear-gradient(90deg,  #ffffff 3%, #ffffff 0%,#ffffff 99%, #93c5fd 1%);
+}
+
+
+.bg-colored-shadow:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background:linear-gradient(-365deg, #6e79ff 77%, #ff652a 200% );
+    transform: translate3d(0px, 5px, 0) scale(0.86);
+    filter: blur(20px);
+    opacity: 0.31;
+    transition: opacity 0.3s;
+    border-radius: inherit;
+}
+
+/*
+* Prevents issues when the parent creates a
+* stacking context. (For example, using the transform
+* property )
+*/
+.bg-colored-shadow::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+}
+
+
