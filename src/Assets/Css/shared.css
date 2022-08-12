@@ -34,7 +34,7 @@
     height: 100%;
 }
 .bg-main-graidant{
-    background:linear-gradient(326deg,#ffffff00 6%, #ffffff12 4%, #ffffff00   23%),linear-gradient(321deg,#ffffff00 11%, #ffffff12 -1%, #ffffff00   25%),linear-gradient(295deg,#ffffff00 4%, #ffffff12 13.4%, #ffffff00   8%),linear-gradient(292deg,#ffffff00 18%, #ffffff12 21.4%, #ffffff00   9%),linear-gradient(169deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(286deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(275deg,#ffffff00 22%, #ffffff12 32.4%, #ffffff00   24%),linear-gradient(270deg,#95B2FF 31%, white, transparent  35%)
+    background:linear-gradient(326deg,#ffffff00 6%, #ffffff12 4%, #ffffff00   23%),linear-gradient(321deg,#ffffff00 11%, #ffffff12 -1%, #ffffff00   25%),linear-gradient(295deg,#ffffff00 4%, #ffffff12 13.4%, #ffffff00   8%),linear-gradient(292deg,#ffffff00 18%, #ffffff12 21.4%, #ffffff00   9%),linear-gradient(169deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(286deg,#ffffff00 22%, #ffffff12 28.4%, #ffffff00   24%),linear-gradient(275deg,#ffffff00 22%, #ffffff12 32.4%, #ffffff00   24%),linear-gradient(270deg,#95B2FF 100%, white, transparent  35%);
 }
 .ring-blue{
     background: linear-gradient(90deg,  #ffffff 3%, #ffffff 0%,#ffffff 99%, #93c5fd 1%);
@@ -43,7 +43,7 @@
 
 .bg-colored-shadow:before {
     content: "";
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     top: 0;
     right: 0;
@@ -64,7 +64,7 @@
 */
 .bg-colored-shadow::after {
     content: "";
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     top: 0;
     right: 0;
@@ -75,3 +75,6 @@
 }
 
 
+bg-milky{
+    background: #f3f5f9;
+}
