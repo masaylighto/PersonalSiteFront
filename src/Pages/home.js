@@ -66,7 +66,7 @@ class Chome extends React.Component{
     }
     endSide(){
         return (       
-        <div className='sm:w-[27rem] w-full sm:order-2 order-1 bg-main-graidant  sm:items-center ml-auto grid sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px]'>
+        <containers.grid className='sm:w-[27rem] w-full sm:order-2 order-1 bg-main-graidant  sm:items-center ml-auto  sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px]'>
             <div className={" sm:mx-0 mx-auto bg-gradiant-blue md:mt-0  mt-5  rounded-full w-[15rem] h-[15rem] p-6 "}>
                 <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
                 <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
@@ -79,7 +79,7 @@ class Chome extends React.Component{
                 <p tabIndex={14} className='sm:-ml-3 text-center md:text-start hover:translate-y-1 hover:translate-x-1'>System Adminstrator</p>
                 <p tabIndex={15} className='sm:-ml-6 text-center md:text-start hover:translate-y-1 '>Data Scientist</p>
             </containers.col>
-        </div>
+        </containers.grid>
         )
     }
     state={
