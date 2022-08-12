@@ -23,7 +23,7 @@ class Cnav extends React.Component{
                 "Url":"/Projects"
             }, 
             {
-                "Name":"Expirences",
+                "Name":"Experience",
                 "Url":"/Expirences"
             }, 
         ]

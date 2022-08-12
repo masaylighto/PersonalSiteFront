@@ -45,7 +45,7 @@ class Cskills extends React.Component{
     {
         let color=GetPrimaryColors(index)
         return <containers.col   className={"w-52  bg-white items-center  flex   h-52 shadow-sm rounded"} key={index}>
-            <p tabIndex={this.tabIndex++} style={{borderColor:color}}  title={"Skill Name"} className={"border-l-4 rounded-t h-7 flex items-center pl-1 mr-auto"}>{name}</p>
+            <p tabIndex={this.tabIndex++}  style={{borderColor:color}}  title={"Skill Name"} className={"border-l-4 rounded-t h-7 flex items-center pl-1 mr-auto"}>{name}</p>
             <p tabIndex={this.tabIndex++} title={"Skill Description"} className={"m-auto"}>{desc}</p>
             <containers.row className={"ml-auto h-10"}>
             <p tabIndex={this.tabIndex++} title={"Skill Catagory"} style={{borderColor:color}} className={"border h-full flex px-3 items-center"}>{cata}</p>
