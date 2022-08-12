@@ -5,6 +5,11 @@ import containers from '../Components/containers';
 import buttons from '../Components/buttons';
 import {GetPrimaryColors} from "../helper/Styles";
 class CExpirences extends React.Component{
+    constructor(props) {
+        super(props);
+        this.tabIndex=0;
+    }
+    tabIndex
     componentDidMount() {
 
         this.prevJops([
@@ -21,8 +26,8 @@ class CExpirences extends React.Component{
     prevJop(name,desc,index){
         let color =GetPrimaryColors(index);
         return <containers.col key={index} className={"bg-white   py-3 gap-y-3 max-w-[200px] min-w-[200px] min-h-[200px] rounded shadow-sm"}>
-            <p style={{borderColor:color}} className={"h-1/5 w-fit border mx-auto px-2  rounded flex justify-center items-center"}>{name}</p>
-            <p style={{borderColor:color}} className={"text-md px-5 h-fit my-auto items-center border-x flex"}>{desc}</p>
+            <p tabIndex={this.tabIndex++} title={"Name"} style={{borderColor:color}} className={"h-1/5 w-fit border mx-auto px-2  rounded flex justify-center items-center"}>{name}</p>
+            <p tabIndex={this.tabIndex++} title={"Description"} style={{borderColor:color}} className={"text-md px-5 h-fit my-auto items-center border-x flex"}>{desc}</p>
         </containers.col>
     }
     prevJops(PrevJops){
