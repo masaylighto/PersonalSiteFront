@@ -36,10 +36,10 @@ class CExpirences extends React.Component{
 render(){
 
     return  (
-        <containers.col style={{background:"#f3f5f9"}} className={"h-[100%]"}>
+        <containers.col style={{background:"#f3f5f9"}} className={"h-[100%] w-full"}>
             <Cnav></Cnav>
-            <containers.scroller className={"scrollbar-hide h-[100%] mt-5"}>
-                <containers.warp className={"gap-5 my-auto h-fit w-5/6 mx-auto"}>
+            <containers.scroller className={"scrollbar-hide h-[100%] w-full mt-5"}>
+                <containers.warp className={"gap-5 justify-center  my-auto h-fit w-5/6 mx-auto"}>
                     {this.state.prevJops}
                 </containers.warp>
             </containers.scroller>
