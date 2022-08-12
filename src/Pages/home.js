@@ -5,12 +5,10 @@ import containers from '../Components/containers';
 import buttons from '../Components/buttons';
 class Chome extends React.Component{
 
-    
-    contactUs(){
-        return [
-            {
-                "link":"+96407716803406",
-                "img":require("../Assets/icons/Phone.png")
+    componentDidMount() {
+        let contacts=[{
+            "link":"+96407716803406",
+            "img":require("../Assets/icons/Phone.png")
             },
             {
                 "link":"@alimiracle",
@@ -24,8 +22,14 @@ class Chome extends React.Component{
                 "link":"github",
                 "img":require("../Assets/icons/Github.png")
             },
+        ]
+        this.contactUs(contacts)
+        this.setState(this.state)
+    }
 
-        ].map((item,index)=>{
+    contactUs(contacts){
+        this.state.contacts= contacts
+            .map((item,index)=>{
             return <buttons.contact tabIndex={index+16} title={item.link}  className={"hover:-translate-x-2"} key={index} link={item.link} img={item.img}/>
 
         })
@@ -53,7 +57,7 @@ class Chome extends React.Component{
             <div className='w-full sm:order-1 order-2'>
                 <containers.row className='mx-auto gap-3 w-4/6'>
                     <containers.col  className={"  justify-between py-1"}>
-                       {this.contactUs()}
+                       {this.state.contacts}
                     </containers.col>
                     {this.aboutUs()}
                 </containers.row>
@@ -77,6 +81,9 @@ class Chome extends React.Component{
             </containers.col>
         </div>
         )
+    }
+    state={
+        contacts:""
     }
     render(){
 

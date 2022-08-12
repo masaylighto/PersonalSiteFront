@@ -11,8 +11,33 @@ class Cskills extends React.Component{
         this.tabIndex=0
     }
     componentDidMount() {
-        this.skills();
-        this.catagories();
+        let skills=[
+            {"name":"Name","description":"Devops","category":"programming"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"},
+            {"name":"Name","description":"Devops","category":"prog"}
+        ];
+        let catagories=[
+            "prog",
+            "prog",
+            "prog",
+            "prog",
+            "prog",
+        ]
+        this.skills(skills);
+        this.catagories(catagories);
         this.setState(this.state)
     }
     tabIndex
@@ -31,41 +56,18 @@ class Cskills extends React.Component{
     catagory(desc,index){
         return <option tabIndex={this.tabIndex++} className={"text-center"}  key={index}>{desc}</option>
     }
-    catagories(){
-        this.state.catagory=[
-            "prog",
-            "prog",
-            "prog",
-            "prog",
-            "prog",
-        ].map((catagory,index)=>{
+    catagories(catagories){
+        this.state.catagory=catagories.map((catagory,index)=>{
 
             return this.catagory(catagory,index);
         })
 
 
     }
-    skills()
+    skills(skills)
     {
 
-        this.state.skills =[
-            {"name":"Name","description":"Devops","category":"programming"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"}
-        ].map((item,index)=>{
+        this.state.skills =skills.map((item,index)=>{
                 return this.skill(item.name,item.description,item.category,index)
             })
 

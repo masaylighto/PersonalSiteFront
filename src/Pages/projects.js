@@ -8,23 +8,8 @@ class Cprojects extends React.Component{
         super(props);
         this.tabIndex=0
     }
-    tabIndex
-    card(name, desc, price, index)
-    {
-        return(
-            <containers.col key={index} style={{borderColor:"#93c5fd"}} className={ "max-w-[20rem]  bg-white  relative border-r-[2px] shadow-sm      rounded-2xl " }>
-
-                <p tabIndex={this.tabIndex++} title='Project Name'        className='text-white z-10 flex-1 bg-blue-300 rounded rounded-tl-2xl pl-3 sticky  z-20 w-fit pr-5'>{name}</p>
-                <p tabIndex={this.tabIndex++} title='Project Description' className='pl-1 break-words  z-10 flex-4 rounded-tl-none pr-2  min-h-fit flex items-center sticky  py-10 px-3 rounded-2xl h-full pt-3 '>{desc} </p>
-                <p tabIndex={this.tabIndex++} title='Project Price'    style={{borderColor:"#93c5fd"}}   className={"text-right -mr-[1px] border-[2px] p-1 rounded-br-2xl z-10 w-fit ml-auto pr-5 "} >{price}</p>
-
-            </containers.col>
-        )
-    }
-
-    cards()
-    {
-        return [
+    componentDidMount() {
+        let cards=[
             {
                 "Name":"Python",
                 "Desc":"This unit includes some Algorithms for Python programming language.",
@@ -100,21 +85,41 @@ class Cprojects extends React.Component{
                 "Desc":"Some Package",
                 "Price":"123$"
             }
+        ]
+        this.cards(cards)
+        this.setState(this.state)
+    }
 
+    tabIndex
+    card(name, desc, price, index)
+    {
+        return(
+            <containers.col key={index} style={{borderColor:"#93c5fd"}} className={ "max-w-[20rem]  bg-white  relative border-r-[2px] shadow-sm      rounded-2xl " }>
 
+                <p tabIndex={this.tabIndex++} title='Project Name'        className='text-white z-10 flex-1 bg-blue-300 rounded rounded-tl-2xl pl-3 sticky  z-20 w-fit pr-5'>{name}</p>
+                <p tabIndex={this.tabIndex++} title='Project Description' className='pl-1 break-words  z-10 flex-4 rounded-tl-none pr-2  min-h-fit flex items-center sticky  py-10 px-3 rounded-2xl h-full pt-3 '>{desc} </p>
+                <p tabIndex={this.tabIndex++} title='Project Price'    style={{borderColor:"#93c5fd"}}   className={"text-right -mr-[1px] border-[2px] p-1 rounded-br-2xl z-10 w-fit ml-auto pr-5 "} >{price}</p>
 
-        ].map((item,index)=>{
+            </containers.col>
+        )
+    }
+
+    cards(cards)
+    {
+        this.state.cards= cards.map((item,index)=>{
             return this.card(item.Name,item.Desc,item.Price,index)
         })
     }
-
+state={
+        cards:""
+}
 render(){
     return(
     <containers.col style={{background:"#f3f5f9"}} className={"h-full"}>
         <Cnav className={"bg-white"}></Cnav>
         <div className='h-90 mt-2  justify-center items-center flex'>
             <containers.grid    className={"  w-fit mx-auto  py-10  gap-10 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 overflow-scroll scrollbar-hide   h-full   "}>
-            {this.cards()}
+            {this.state.cards}
             </containers.grid>
         </div>
     </containers.col>)
