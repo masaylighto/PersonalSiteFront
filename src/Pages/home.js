@@ -82,7 +82,7 @@ class Chome extends React.Component{
 
         return <containers.col className={"h-full "}>
             <Cnav></Cnav>
-            <containers.grid className={"w-full overflow-scroll sm:grid-cols-2  gap-y-10 grid-cols-1 justify-evenly sm:h-[95%] h-[200%] items-center"}>
+            <containers.grid className={"w-full overflow-scroll scrollbar-hide sm:grid-cols-2  gap-y-10 grid-cols-1 justify-evenly sm:h-[95%] h-[200%] items-center"}>
                 {this.startSide()}
                 {this.endSide()}
             </containers.grid>

@@ -4,15 +4,15 @@ import Cnav from '../Components/navbar';
 import containers from '../Components/containers';
 
 class Cprojects extends React.Component{
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.tabIndex=0
     }
     tabIndex
     card(name, desc, price, index)
     {
         return(
-            <containers.col key={index} style={{borderColor:"#93c5fd"}} className={ "max-w-[20rem]  bg-white  relative border-r-[2px]   bg-colored-shadow      rounded-2xl " }>
+            <containers.col key={index} style={{borderColor:"#93c5fd"}} className={ "max-w-[20rem]  bg-white  relative border-r-[2px] shadow-sm      rounded-2xl " }>
 
                 <p tabIndex={this.tabIndex++} title='Project Name'        className='text-white z-10 flex-1 bg-blue-300 rounded rounded-tl-2xl pl-3 sticky  z-20 w-fit pr-5'>{name}</p>
                 <p tabIndex={this.tabIndex++} title='Project Description' className='pl-1 break-words  z-10 flex-4 rounded-tl-none pr-2  min-h-fit flex items-center sticky  py-10 px-3 rounded-2xl h-full pt-3 '>{desc} </p>

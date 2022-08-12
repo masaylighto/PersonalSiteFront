@@ -6,7 +6,7 @@ class Cnav extends React.Component{
 
     btn(name,link,key){
 
-        return <buttons.link title={"navbar btn"} key={key} name={name} jumpTo={link} className={"px-4 h-10 text-center flex-1 hover:border-t-2 border-t-blue-300"}/>
+        return <buttons.link title={"navbar btn"} key={key} name={name} jumpTo={link} className={"px-4  md:my-auto pt-1 text-center flex-1 hover:border-t-2 border-t-blue-300"}/>
     }
     pageBtns(){
     return     [
@@ -35,7 +35,7 @@ class Cnav extends React.Component{
     render(){
 
         return (<div className={"w-full  " +this.props.className}>
-                    <div  className={"flex flex-wrap  w-fit sm:justify-evenly gap-10 items-center px-3 gap-2"}>
+                    <div  className={"flex flex-wrap  w-fit sm:justify-evenly min-h-[40px] gap-10 items-center px-3"}>
                         <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >
                             Ali
                             <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7 hover:scale-110  bg-no-repeat bg-contain"}/>

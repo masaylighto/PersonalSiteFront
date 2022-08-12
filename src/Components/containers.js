@@ -21,12 +21,17 @@ function scroller(props){
         {props.children}
     </div>)
 }
-
+function wrap(props){
+    return (<div style={props.style} className={'flex flex-wrap ' +props.className}>
+        {props.children}
+    </div>)
+}
 const containers={
     row:row,
     col:col,
     grid:grid,
-    scroller:scroller
+    scroller:scroller,
+    warp:wrap
 }
 
 
