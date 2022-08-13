@@ -9,7 +9,7 @@ const linkBtn=(props)=>{
 
 const contactBtn=(props)=>{
     return (  
-        <img tabIndex={props.tabIndex} title={props.title}  onClick={CopyToClipboard(props.link,Event).bind() } src={props.img} className={"w-5 h-4 "+props.className} ></img>
+        <p tabIndex={props.tabIndex} title={props.title}  onClick={CopyToClipboard(props.link,Event).bind()}  className={" h-4 "+props.className} >{props.children}</p>
 
      )
 }

@@ -3,36 +3,22 @@ import "../Assets/Css/tailwind.css"
 import Cnav from '../Components/navbar';
 import containers from '../Components/containers';
 import buttons from '../Components/buttons';
+import env from "../helper/env";
 class Chome extends React.Component{
 
     componentDidMount() {
-        let contacts=[{
-            "link":"+96407716803406",
-            "img":require("../Assets/icons/Phone.png")
-        },
-            {
-                "link":"@alimiracle",
-                "img":require("../Assets/icons/telegram.png")
-            },
-            {
-                "link":"linkedin",
-                "img":require("../Assets/icons/linkedin.png")
-            },
-            {
-                "link":"github",
-                "img":require("../Assets/icons/Github.png")
-            },
-        ]
-        this.contactUs(contacts)
-        this.setState(this.state)
+        fetch(env.Backend_Base_Url+"/jobs").then(c=>c.json()).then((r)=>{this.contactUs(r)}).catch(r=>console.log(r))
+
+
     }
 
     contactUs(contacts){
         this.state.contacts= contacts
             .map((item,index)=>{
-                return <buttons.contact tabIndex={index+16} title={item.link}  className={"hover:-translate-x-2"} key={index} link={item.link} img={item.img}/>
+                return <buttons.contact tabIndex={index+16} title={item.link}  className={"hover:-translate-x-2 text-left"} key={index} link={item.url} >{item.name}</buttons.contact>
 
             })
+        this.setState(this.state)
     }
     aboutUs(){
         return (
@@ -56,7 +42,7 @@ class Chome extends React.Component{
         return (
             <div className='w-full sm:order-1 order-2'>
                 <containers.row className='mx-auto gap-3 w-4/6'>
-                    <containers.col  className={"  justify-between py-1"}>
+                    <containers.col  className={" w-fit justify-between py-1"}>
                         {this.state.contacts}
                     </containers.col>
                     {this.aboutUs()}
