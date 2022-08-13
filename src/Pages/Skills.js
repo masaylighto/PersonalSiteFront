@@ -4,6 +4,7 @@ import "../Assets/Css/shared.css"
 import Cnav from '../Components/navbar';
 import containers from '../Components/containers';
 import {GetPrimaryColors} from "../helper/Styles";
+import env from "../helper/env";
 
 class Cskills extends React.Component{
     constructor(props) {
@@ -11,36 +12,11 @@ class Cskills extends React.Component{
         this.tabIndex=0
     }
     skillsData=[]
+
     componentDidMount() {
-        this.skillsData=[
-            {"name":"Name","description":"Devops","category":"programming"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"},
-            {"name":"Name","description":"Devops","category":"prog"}
-        ];
-        let catagories=[
-            "s",
-            "prog",
-            "prog",
-            "prog",
-            "prog",
-        ]
-        catagories.push("All");
-        this.skills(this.skillsData);
-        this.catagories(catagories);
-        this.setState(this.data)
+        fetch(env.Backend_Base_Url+"/skills").then(c=>c.json()).then(r=>this.skillsData=r).then((r)=>{this.skills(r)}).catch(r=>console.log(r))
+        fetch(env.Backend_Base_Url+"/skillsCategories").then(c=>c.json()).then((r)=>{this.catagories(r)}).catch(r=>console.log(r))
+
     }
     tabIndex
     skill(name,desc,cata,index)
@@ -59,23 +35,19 @@ class Cskills extends React.Component{
         return <option tabIndex={this.tabIndex++} className={"text-center"} value={desc}  key={index}>{desc}</option>
     }
     catagories(catagories){
-        this.data.catagory= catagories.map((catagory,index)=>{
+        catagories.push("All");
+        this.state.catagory= catagories.map((catagory,index)=>{
             return this.catagory(catagory,index);
         })
-
-
+        this.setState(this.state)
     }
     skills(skills)
     {
 
-        this.data.skills =skills.map((item,index)=>{
-                return this.skill(item.name,item.description,item.category,index)
-            })
-
-    }
-    data={
-        skills:"",
-        catagory:""
+        this.state.skills =  skills.map((skill,index)=>{
+            return this.skill(skill.name,skill.description,skill.category,++index)
+        })
+        this.setState(this.state)
     }
     state={
         skills:"",

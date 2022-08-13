@@ -8,7 +8,6 @@ import Cprojects from './Pages/projects';
 import Cskills from './Pages/Skills';
 import Cexpirences from './Pages/Expirences';
 
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
