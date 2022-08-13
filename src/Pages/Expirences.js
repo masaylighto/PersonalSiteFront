@@ -4,6 +4,7 @@ import Cnav from '../Components/navbar';
 import containers from '../Components/containers';
 import buttons from '../Components/buttons';
 import {GetPrimaryColors} from "../helper/Styles";
+import env from "../helper/env";
 class CExpirences extends React.Component{
     constructor(props) {
         super(props);
@@ -11,17 +12,8 @@ class CExpirences extends React.Component{
     }
     tabIndex
     componentDidMount() {
+        fetch(env.Backend_Base_Url+"/jobs").then(c=>c.json()).then((r)=>{this.prevJops(r)}).catch(r=>console.log(r))
 
-        this.prevJops([
-            {"name":"EarthLink","description":"worked for 7 years as devops"},
-            {"name":"EarthLink","description":"worked for 7 years as devops"},
-            {"name":"EarthLink","description":"worked for 7 years as devops"},
-            {"name":"EarthLink","description":"worked for 7 years as devops"},
-            {"name":"EarthLink","description":"worked for 7 years as devops"},
-
-
-        ]);
-        this.setState(this.state)
     }
     prevJop(name,desc,index){
         let color =GetPrimaryColors(index);
@@ -32,8 +24,9 @@ class CExpirences extends React.Component{
     }
     prevJops(PrevJops){
         this.state.prevJops=PrevJops.map((item,index)=>{
-        return this.prevJop(item.name,item.description,index);
+            return this.prevJop(item.name,item.description,index);
         })
+        this.setState(this.state)
     }
     state={
         prevJops:""
