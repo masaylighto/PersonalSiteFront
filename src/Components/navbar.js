@@ -34,7 +34,7 @@ class Cnav extends React.Component{
 
     render(){
 
-        return (<div className={"w-full  " +this.props.className}>
+        return (<containers.row className={"w-full  " +this.props.className}>
                     <containers.warp  className={" w-fit sm:justify-evenly min-h-[40px] gap-10 items-center px-3"}>
                         <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >
                             Ali
@@ -42,9 +42,10 @@ class Cnav extends React.Component{
                             Miracle
                         </p>
                         {this.pageBtns()}
-                        {this.props.children}
+
                     </containers.warp >
-                </div>)
+            {this.props.children}
+                </containers.row>)
     }
 }
 export default Cnav
