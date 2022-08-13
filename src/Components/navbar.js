@@ -35,14 +35,15 @@ class Cnav extends React.Component{
     render(){
 
         return (<div className={"w-full  " +this.props.className}>
-                    <div  className={"flex flex-wrap  w-fit sm:justify-evenly min-h-[40px] gap-10 items-center px-3"}>
+                    <containers.warp  className={" w-fit sm:justify-evenly min-h-[40px] gap-10 items-center px-3"}>
                         <p style={{color:"#628cfb"}} className={"flex gap-2 items-end"} >
                             Ali
-                            <img src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7 hover:scale-110  bg-no-repeat bg-contain"}/>
+                            <img alt={""} src={require("../Assets/icons/freedo.png")} className={"logo w-7 h-7 hover:scale-110  bg-no-repeat bg-contain"}/>
                             Miracle
                         </p>
                         {this.pageBtns()}
-                    </div >
+                        {this.props.children}
+                    </containers.warp >
                 </div>)
     }
 }

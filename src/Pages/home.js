@@ -54,7 +54,7 @@ class Chome extends React.Component{
     startSide(){
 
         return (
-            <div className='w-full sm:order-1 order-2'>
+            <div className={'w-full sm:order-1 order-2 '+this.props.className}>
                 <containers.row className='mx-auto gap-3 w-4/6'>
                     <containers.col  className={"  justify-between py-1"}>
                        {this.state.contacts}
@@ -66,7 +66,7 @@ class Chome extends React.Component{
     }
     endSide(){
         return (       
-        <containers.grid className='sm:w-[27rem] w-full sm:order-2 order-1 bg-main-graidant  sm:items-center ml-auto  sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px]'>
+        <containers.grid className={'sm:w-[27rem] sm:order-2 order-1 w-full  bg-main-graidant  sm:items-center ml-auto  sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px] '+this.props.className}>
             <div className={" sm:mx-0 mx-auto bg-gradiant-blue md:mt-0  mt-5  rounded-full w-[15rem] h-[15rem] p-6 "}>
                 <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
                 <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
@@ -87,13 +87,14 @@ class Chome extends React.Component{
     }
     render(){
 
-        return <containers.col className={"h-full "}>
-            <Cnav></Cnav>
+        return <containers.grid className={"h-full "}>
+            <Cnav>
+            </Cnav>
             <containers.grid className={"w-full overflow-scroll scrollbar-hide sm:grid-cols-2  gap-y-10 grid-cols-1 justify-evenly sm:h-[95%] h-[200%] items-center"}>
                 {this.startSide()}
                 {this.endSide()}
             </containers.grid>
-        </containers.col>
+        </containers.grid>
     }
 }
 export default Chome
