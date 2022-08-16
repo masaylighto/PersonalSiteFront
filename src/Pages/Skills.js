@@ -15,7 +15,6 @@ class Cskills extends React.Component{
 
     componentDidMount() {
         fetch(env.Backend_Base_Url+"/skills").then(c=>c.json()).then(r=>this.skillsData=r).then((r)=>{this.skills(r)}).catch(r=>console.log(r))
-        fetch(env.Backend_Base_Url+"/skillsCategories").then(c=>c.json()).then((r)=>{this.catagories(r)}).catch(r=>console.log(r))
 
     }
     tabIndex
@@ -26,8 +25,9 @@ class Cskills extends React.Component{
             <p tabIndex={this.tabIndex++}  style={{borderColor:color}}  title={"Skill Name"} className={"border-l-4 rounded-t h-7 flex items-center pl-1 mr-auto"}>{name}</p>
             <p tabIndex={this.tabIndex++} title={"Skill Description"} className={"m-auto"}>{desc}</p>
             <containers.row className={"ml-auto h-10"}>
-            <p tabIndex={this.tabIndex++} title={"Skill Catagory"} style={{borderColor:color}} className={"border h-full flex px-3 items-center"}>{cata}</p>
-            <div  style={{background:color}} className={"w-10 h-full rounded-br"}></div>
+           <div  className={"w-10 h-full rounded-br border"} style={{borderColor:color}}>
+
+           </div>
             </containers.row>
         </containers.col >
     }
@@ -60,20 +60,11 @@ class Cskills extends React.Component{
         this.skills(skill);
         this.setState(this.data)
     }
-    catagorySelect(){
 
-        return <containers.row className={"w-4/5  p-2  mx-auto mt-10 mb-5"}>
-           <select onChange={((event)=>this.SelectCatagory(event)).bind()}  tabIndex={this.tabIndex++} className={"w-52 -ml-2 border h-12 border-blue-100 h-full  shadow rounded bg-white outline-0"}>
-               <option selected className={"text-center"} disabled>Select Category</option>
-               {this.state.catagory}
-            </select>
-        </containers.row>
-    }
 render(){
     return(
         <containers.col  style={{background:"#f3f5f9"}} className={"h-100 w-full"}>
             <Cnav className={"bg-white "}></Cnav>
-            {this.catagorySelect()}
             <containers.scroller className={"h-full scrollbar-hide"}>
             <containers.grid   className={"w-fit mx-auto gap-12 justify-between   bg-milky  py-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1   md:m-auto "}>
                 {this.state.skills}

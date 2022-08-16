@@ -8,8 +8,6 @@ class Chome extends React.Component{
 
     componentDidMount() {
         fetch(env.Backend_Base_Url+"/jobs").then(c=>c.json()).then((r)=>{this.contactUs(r)}).catch(r=>console.log(r))
-
-
     }
 
     contactUs(contacts){
