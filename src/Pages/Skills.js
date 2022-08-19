@@ -21,25 +21,29 @@ class Cskills extends React.Component{
     skill(name,desc,cata,index)
     {
         let color=GetPrimaryColors(index)
-        return <containers.col   className={"w-52  bg-white items-center  flex   h-52 shadow-sm rounded"} key={index}>
-            <p tabIndex={this.tabIndex++}  style={{borderColor:color}}  title={"Skill Name"} className={"border-l-4 rounded-t h-7 flex items-center pl-1 mr-auto"}>{name}</p>
-            <p tabIndex={this.tabIndex++} title={"Skill Description"} className={"m-auto"}>{desc}</p>
-            <containers.row className={"ml-auto h-10"}>
-           <div  className={"w-10 h-full rounded-br border"} style={{borderColor:color}}>
+        return <containers.col   className={"w-64  bg-white items-center  flex   h-64  shadow-sm rounded-lg"} key={index}>
+            <containers.col style={{borderColor:color}} className={"rounded-t-lg border-l-4 pl-1 mr-auto"}>
+                <div style={{background:color}}  className={"h-1 rounded-tl-lg  w-10 -ml-1"}></div>
+                <p tabIndex={this.tabIndex++}   title={"Skill Name"} className={" bg-white  h-7 flex items-center "}>{name}</p>
 
+
+            </containers.col>
+            <p tabIndex={this.tabIndex++} title={"Skill Description"} className={"m-auto px-3"}>{desc}</p>
+            <containers.row className={"ml-auto h-10"}>
+           <div  className={"w-10 h-full rounded-br border pt-2 pl-2"} style={{borderColor:color}}>
+                <div style={{background:color}} className={"h-full pt-2 pl-2 w-full"}>
+                    <div style={{background:"White"}} className={"h-full pt-2 pl-2  w-full"}>
+                        <div style={{background:color}} className={"h-full  w-full"}>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
            </div>
             </containers.row>
         </containers.col >
-    }
-    catagory(desc,index){
-        return <option tabIndex={this.tabIndex++} className={"text-center"} value={desc}  key={index}>{desc}</option>
-    }
-    catagories(catagories){
-        catagories.push("All");
-        this.state.catagory= catagories.map((catagory,index)=>{
-            return this.catagory(catagory,index);
-        })
-        this.setState(this.state)
     }
     skills(skills)
     {
@@ -52,13 +56,6 @@ class Cskills extends React.Component{
     state={
         skills:"",
         catagory:""
-    }
-    SelectCatagory(event){
-        let skill = this.skillsData.filter((v,i,a)=>{
-            return  event.target.value==="All" || v["category"]===event.target.value
-        })
-        this.skills(skill);
-        this.setState(this.data)
     }
 
 render(){

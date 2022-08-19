@@ -1,4 +1,4 @@
 let env={
-    Backend_Base_Url:"http://127.0.0.1:3001/api"
+    Backend_Base_Url:"https://api.alimiracle.codes/api"
 }
 export  default env

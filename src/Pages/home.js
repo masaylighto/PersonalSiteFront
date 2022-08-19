@@ -11,9 +11,11 @@ class Chome extends React.Component{
     }
 
     contactUs(contacts){
+
+
         this.state.contacts= contacts
             .map((item,index)=>{
-                return <buttons.contact tabIndex={index+16} title={item.link}  className={"hover:-translate-x-2 text-left"} key={index} link={item.url} >{item.name}</buttons.contact>
+                return <buttons.contact tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right"} key={index} link={item.url} >{item.name}</buttons.contact>
 
             })
         this.setState(this.state)
@@ -21,7 +23,7 @@ class Chome extends React.Component{
     aboutUs(){
         return (
 
-            <p className={"w-full flex-warp flex flex-col border-l pl-1 border-black"}>
+            <p className={"w-full  flex-warp flex flex-col   "}>
                 <div tabIndex={1}  className='hover:translate-x-1'> I am <span style={{color:"#628cfb"}} className=' w-fit'>Ali Abdul Ghani</span></div>
                 <div tabIndex={2} className='hover:translate-x-1'> I'm from Baghdad. I go by the name  <span style={{color:"#628cfb"}} className=' w-fit'>"Ali Miracle"</span>,</div>
                 <div tabIndex={3} className='hover:translate-x-1'> am known by this name on the internet, and have been  </div>
@@ -39,8 +41,8 @@ class Chome extends React.Component{
 
         return (
             <div className='w-full sm:order-1 order-2'>
-                <containers.row className='mx-auto gap-3 w-4/6'>
-                    <containers.col  className={" w-fit justify-between py-1"}>
+                <containers.row className='mx-auto gap-3 w-full'>
+                    <containers.col  className={" border-black border-r pr-2 w-fit   justify-between py-1"}>
                         {this.state.contacts}
                     </containers.col>
                     {this.aboutUs()}
@@ -50,7 +52,7 @@ class Chome extends React.Component{
     }
     endSide(){
         return (
-            <containers.grid className='sm:w-[27rem] w-full sm:order-2 order-1 bg-main-graidant  sm:items-center ml-auto  sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px]'>
+            <containers.grid className='sm:w-[30rem] w-full sm:order-2 order-1 bg-main-graidant  sm:items-center ml-auto  sm:grid-cols-2 grid-cols-1   md:gap-2   sm:h-full h-[500px]'>
                 <div className={" sm:mx-0 mx-auto bg-gradiant-blue md:mt-0  mt-5  rounded-full w-[15rem] h-[15rem] p-6 "}>
                     <div style={{background:"#ffffff96"}} className={"e  rounded-full p-3  w-full h-full"}>
                         <img src={require("../Assets/icons/freedo.png")} className={"bg-contain  hover:animate-bounce w-full h-full "} ></img>
@@ -73,7 +75,7 @@ class Chome extends React.Component{
 
         return <containers.col className={"h-full "}>
             <Cnav>
-                <div style={{background:"#95b2ff"}} className={"ml-auto sm:w-[27rem] sm:min-h-[30px] "}></div>
+                <div style={{background:"#95b2ff"}} className={"ml-auto sm:w-[30rem] sm:min-h-[30px] "}></div>
             </Cnav>
             <containers.grid className={"w-full overflow-scroll scrollbar-hide sm:grid-cols-2  gap-y-10 grid-cols-1 justify-evenly sm:h-[95%] h-[200%] items-center"}>
                 {this.startSide()}
