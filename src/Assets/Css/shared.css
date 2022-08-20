@@ -1,10 +1,10 @@
-@font-face 
+@font-face
 {
-    font-family: simsun;
-    src: url("../fonts/Simsun.ttf");
+    font-family: SpaceMono;
+    src: url("../fonts/SpaceMono-Regular.ttf");
 }
 *{
-    font-family: simsun;
+    font-family: SpaceMono;
 }
 .bg-gradiant-blue{
     background:linear-gradient(102deg,#ffffffc5 30%,  #ffffff36  52%)
