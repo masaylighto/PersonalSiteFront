@@ -15,7 +15,7 @@ class Chome extends React.Component{
 
         this.state.contacts= contacts
             .map((item,index)=>{
-                return <buttons.contact tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right"} key={index} link={item.url} >{item.name}</buttons.contact>
+                return <buttons.contact type={item.type} tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right"} key={index} link={item.url} >{item.name}</buttons.contact>
 
             })
         this.setState(this.state)
@@ -23,7 +23,7 @@ class Chome extends React.Component{
     aboutUs(){
         return (
 
-            <p className={"w-full  flex-warp flex flex-col   "}>
+            <div className={"w-full  flex-warp flex flex-col   "}>
                 <div tabIndex={1}  className='hover:translate-x-1'> I am <span style={{color:"#628cfb"}} className=' w-fit'>Ali Abdul Ghani</span></div>
                 <div tabIndex={2} className='hover:translate-x-1'> I'm from Baghdad. I go by the name  <span style={{color:"#628cfb"}} className=' w-fit'>"Ali Miracle"</span>,</div>
                 <div tabIndex={3} className='hover:translate-x-1'> am known by this name on the internet, and have been  </div>
@@ -34,7 +34,7 @@ class Chome extends React.Component{
                 <div tabIndex={8} className='hover:translate-x-1'> As the laws in Iraq does not permit blind people</div>
                 <div tabIndex={9} className='hover:translate-x-1'> from obtaining degrees in computer science or any other </div>
                 <div tabIndex={10} className='hover:translate-x-1'> scientific field, such as mathematics or physics.</div>
-            </p>
+            </div>
         )
     }
     startSide(){
