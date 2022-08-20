@@ -15,7 +15,7 @@ class Chome extends React.Component{
 
         this.state.contacts= contacts
             .map((item,index)=>{
-                return <buttons.contact type={item.type} tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right"} key={index} link={item.url} >{item.name}</buttons.contact>
+                return <buttons.contact type={item.type} tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right active:scale-x-125"} key={index} link={item.url} >{item.name}</buttons.contact>
 
             })
         this.setState(this.state)
