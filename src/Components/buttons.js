@@ -12,8 +12,8 @@ const ContactBtnOnClickEvent=
     {
         "phone":OpenPhoneLink,
         "email":OpenEmailLink,
-        "url":CopyToClipboard,
-        "text":OpenLink
+        "url":OpenLink,
+        "text":CopyToClipboard
     }
 
 const contactBtn=(props)=>{
