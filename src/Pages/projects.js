@@ -20,9 +20,9 @@ class Cprojects extends React.Component{
             <containers.col key={index} style={{borderColor:"#93c5fd"}} className={ "max-w-[20rem] min-w-[20rem]  bg-white  relative border-r-[2px] shadow-sm      rounded-2xl " }>
 
                 <p tabIndex={this.tabIndex++} title='Project Name'        className='text-white z-10 flex-1 bg-blue-300 rounded rounded-tl-2xl pl-3 sticky  z-20 w-fit pr-5'>{name}</p>
-                <p tabIndex={this.tabIndex++} title='Project Description' className='pl-1 text-center break-all justify-center z-10 flex-4 rounded-tl-none pr-2  min-h-fit flex items-center sticky   px-3 rounded-2xl h-full pt-3 '>{desc} </p>
+                <p tabIndex={this.tabIndex++} title='Project Description' className='px-3 text-center break-all justify-center z-10 flex-4 rounded-tl-none pr-2  min-h-fit flex items-center sticky   px-3 rounded-2xl h-full pt-3 '>{desc} </p>
                 <containers.row >
-                    <a href={link} tabIndex={this.tabIndex++} title='Project link'    style={{borderColor:"#93c5fd"}}   className={"text-left  p-1 z-10 w-fit mr-auto  "} >visit</a>
+                    <a href={link} tabIndex={this.tabIndex++} title='Project link'    style={{borderColor:"#93c5fd"}}   className={"text-left  p-1 z-10 w-fit mr-auto pl-4 "} >visit</a>
                     <p tabIndex={this.tabIndex++} title='Project Price'    style={{borderColor:"#93c5fd"}}   className={"text-right -mr-[1px] border-[2px] p-1 rounded-br-2xl z-10 w-fit ml-auto pr-5 "} >{price}</p>
                 </containers.row>
             </containers.col>

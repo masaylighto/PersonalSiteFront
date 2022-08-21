@@ -21,7 +21,7 @@ const contactBtn=(props)=>{
 
     return (
 
-        <button tabIndex={props.tabIndex} title={props.title}  onClick={OnClickEvent.bind(this,props.link)}  className={" h-4 "+props.className} >{props.children}</button>
+        <button tabIndex={props.tabIndex} title={props.title}  onClick={OnClickEvent.bind(this,props.link)}  className={" "+props.className} >{props.children}</button>
 
      )
 }

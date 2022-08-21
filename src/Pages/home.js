@@ -15,7 +15,7 @@ class Chome extends React.Component{
 
         this.state.contacts= contacts
             .map((item,index)=>{
-                return <buttons.contact type={item.type} tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 text-right active:scale-x-125"} key={index} link={item.url} >{item.name}</buttons.contact>
+                return <div className={"flex justify-end"}> <buttons.contact type={item.type} tabIndex={index+16} title={item.name}  className={"hover:-translate-x-2 bg-half-blue shadow-sm rounded  active:scale-x-125"} key={index} link={item.url} >{item.name}</buttons.contact></div>
 
             })
         this.setState(this.state)
@@ -40,7 +40,7 @@ class Chome extends React.Component{
     startSide(){
 
         return (
-            <div className='w-full sm:order-1 order-2'>
+            <div className='w-full ml-3 sm:order-1 order-2'>
                 <containers.row className='mx-auto gap-3 w-full'>
                     <containers.col  className={" border-black border-r pr-2 w-fit   justify-between py-1"}>
                         {this.state.contacts}

@@ -40,7 +40,9 @@
     background: linear-gradient(90deg,  #ffffff 3%, #ffffff 0%,#ffffff 99%, #93c5fd 1%);
 }
 
-
+.bg-half-blue{
+    background: linear-gradient(271deg, #b4d9fd 50%, transparent 50%);
+}
 .bg-colored-shadow:before {
     content: "";
     z-index: 1;
